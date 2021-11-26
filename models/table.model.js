@@ -3,24 +3,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const userSchema = new Schema({
-    username:{
-        type:String,
-        required:true,
-unique:true,
-trim:true,
-minlength:3
-    },
-    password:{type:String,required:true},
-    active :{type:Boolean,required:true},
-lastlogin:{type:Date,required:true},
-DrinkMax:{type:Int},
-FavouriteBrand:{type:String,required:true}
-
+const tableSchema = new Schema({
+    eventname:{type:String,required:true},
+    username:{type:String,required:true},
+    userid:{type:String,required:true},
+    eventid:{type:String,required:true},
+    active:{type:Boolean},
+    tableno:{type:String,required:true},
+    lat:{type:DECIMAL},
+    lon:{type:DECIMAL}
 },
 {
 timestamps:true,
 });
 
-const User = mongoose.model('User',userSchema);
-module.exports = User;
+const Table = mongoose.model('Table',tableSchema);
+module.exports = Table;

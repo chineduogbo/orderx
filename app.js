@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 var swaggerUi = require('swagger-ui-express');
 
- swaggerDocument = require('./swagger.json');
+ //swaggerDocument = require('./swagger.json');
 
 require('dotenv').config();
 
@@ -28,8 +28,8 @@ connection.once('open',()=>{
 
 
 
-app.use('/api-docs', swaggerUi.serve,
-swaggerUi.setup(swaggerDocument));
+// app.use('/api-docs', swaggerUi.serve,
+// swaggerUi.setup(swaggerDocument));
 
 
 app.listen(port,()=>{

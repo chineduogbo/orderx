@@ -8,9 +8,10 @@ const eventSchema = new Schema(
 {
     eventname:{type:String,required:true},
     username:{type:String,required:true},
+    userid:{type:String,required:true},
     active:{type:Boolean},
     lat:{type:DECIMAL},
-    lon:{type:DECIMAL},
+    lon:{type:DECIMAL}
 },
 {
 timestamps:true,
